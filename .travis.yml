@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t hamza -f Dockerfile.dev .
 script:
-  - docker run hamza npm run test -- --coverage
+  - docker run -e CI=true hamza npm run test
